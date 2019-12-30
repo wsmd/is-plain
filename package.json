@@ -1,7 +1,9 @@
 {
   "name": "is-plain",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "Waseem Dahman <dwaseem@icloud.com>",
+  "description": "Test if a value is a plain object",
+  "license": "MIT",
   "repository": "wsmd/is-plain",
   "homepage": "https://github.com/wsmd/is-plain",
   "bugs": {
@@ -12,7 +14,6 @@
   "module": "dist/is-plain.esm.js",
   "umd:main": "dist/is-plain.umd.js",
   "types": "dist/index.d.ts",
-  "license": "MIT",
   "scripts": {
     "typecheck": "tsc --noEmit",
     "lint": "eslint '{src,test}/**/*.{ts,tsx,js}'",
