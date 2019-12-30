@@ -15,6 +15,14 @@ describe('returns true for Object values', () => {
     ['{ prototype: {} }', { prototype: {} }],
     ['{ constructor: Foo }', { constructor: class Foo {} }],
     ['{ __proto__: {} }', { __proto__: {} }],
+    [
+      'Foo.prototype.constructor = Object',
+      (() => {
+        function Foo(): void {}
+        Foo.prototype.constructor = Object;
+        return new (Foo as any)();
+      })(),
+    ],
   ])('%s', (_, value) => {
     expect(isPlain(value)).toBe(true);
   });
@@ -75,6 +83,11 @@ describe('returns false for non-Object values', () => {
     ['new (function Bar() {})()', new (function Bar() {} as any)()],
 
     // other objects
+
+    [
+      'Object.create({ constructor: class Foo {} })',
+      Object.create({ constructor: class Foo {} }),
+    ],
     [
       'object with Symbol.toStringTag property',
       (() => {
