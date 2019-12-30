@@ -1,0 +1,53 @@
+{
+  "name": "is-plain",
+  "version": "0.1.0",
+  "author": "Waseem Dahman <dwaseem@icloud.com>",
+  "repository": "wsmd/is-plain",
+  "homepage": "https://github.com/wsmd/is-plain",
+  "bugs": {
+    "url": "https://github.com/wsmd/is-plain/issues"
+  },
+  "source": "src/index.ts",
+  "main": "dist/is-plain.js",
+  "module": "dist/is-plain.esm.js",
+  "umd:main": "dist/is-plain.umd.js",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint '{src,test}/**/*.{ts,tsx,js}'",
+    "test": "jest",
+    "test:all": "yarn typecheck && yarn lint && yarn test:coverage && yarn test:size",
+    "test:coverage": "jest --coverage",
+    "test:size": "yarn build --silent && bundlesize",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "prebuild": "rm -rf dist",
+    "build": "microbundle --raw --no-sourcemap -f es,cjs,umd",
+    "prepack": "yarn test:all && yarn build"
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@types/jest": "^24.0.25",
+    "@wsmd/eslint-config": "^1.2.0",
+    "bundlesize": "^0.18.0",
+    "coveralls": "^3.0.9",
+    "eslint": "^6.8.0",
+    "jest": "^24.9.0",
+    "microbundle": "^0.12.0-next.6",
+    "prettier": "^1.19.1",
+    "ts-jest": "^24.2.0",
+    "typescript": "^3.7.4"
+  },
+  "bundlesize": [
+    {
+      "path": "./dist/is-plain.js",
+      "maxSize": "167 B"
+    },
+    {
+      "path": "./dist/is-plain.esm.js",
+      "maxSize": "167 B"
+    }
+  ]
+}

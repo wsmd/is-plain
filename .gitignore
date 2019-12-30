@@ -1,0 +1,16 @@
+.DS_Store
+.npmrc
+*.tgz
+*.log
+.vscode
+.env
+.dev
+.cache
+dist
+node_modules
+coverage
+package-lock.json
+test/tmp
+dev
+.rpt2*
+.rts2*
