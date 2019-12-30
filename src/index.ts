@@ -1,7 +1,6 @@
 /**
- * Checks if value is a plain object (an object created with the Object
- * constructor, or objects without prototypes). Useful for testing if a value is
- * an object literal.
+ * Tests if value is a plain object (an object created with the Object
+ * constructor, an object without a prototype, or an object literal).
  *
  * @param value {*}
  * @returns boolean

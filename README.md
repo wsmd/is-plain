@@ -10,8 +10,8 @@
 
 [![NPM Release](https://img.shields.io/npm/v/is-plain.svg)](https://www.npmjs.com/package/is-plain)
 [![Build Status](https://travis-ci.org/wsmd/is-plain.svg?branch=master)](https://travis-ci.org/wsmd/is-plain)
-[![Code Coverage](https://coveralls.io/repos/github/wsmd/is-plain/badge.svg?branch=master=master)](https://coveralls.io/github/wsmd/is-plain?branch=master)
-[![License](https://img.shields.io/github/license/wsmd/is-plain.svg=master)](https://github.com/wsmd/is-plain/blob/master/LICENSE)
+[![Code Coverage](https://coveralls.io/repos/github/wsmd/is-plain/badge.svg?branch=master)](https://coveralls.io/github/wsmd/is-plain?branch=master)
+[![License](https://img.shields.io/github/license/wsmd/is-plain.svg)](https://github.com/wsmd/is-plain/blob/master/LICENSE)
 
 </div>
 
@@ -81,13 +81,11 @@ isPlain(Promise.resolve());
 
 ## Comparison with Other Libraries
 
-There are already similar libraries available to test if a value is a plain object. Some of these libraries are very widely adopted.
+There are already similar libraries available to test if a value is a plain object. Some of these libraries are very widely adopted. To name a few:
 
-To name a few:
-
-- [`lodash.isplainobject`]()
-- [`is-plain-object`]()
-- [`is-plain-obj`]()
+- [`lodash.isplainobject`](https://www.npmjs.com/package/lodash.isplainobject)
+- [`is-plain-object`](https://www.npmjs.com/package/is-plain-object)
+- [`is-plain-obj`](https://www.npmjs.com/package/is-plain-obj)
 
 So, why need `is-plain` when other solutions already exist?
 
@@ -95,7 +93,7 @@ So, why need `is-plain` when other solutions already exist?
 
 `is-plain` is only [**167 bytes**](https://github.com/siddharthkp/bundlesize) minzipped.
 
-I originally wanted something _very_ small but the available solutions did not quite meet my needs The small package size is one of the goals I was aiming for with `is-plain`.
+I originally wanted something _very_ small but the available solutions did not quite meet my needs. The small package size is one of the goals I was aiming for with `is-plain`.
 
 The following is a [size comparison](https://bundlephobia.com/) between `is-plain` and other popular libraries ranked by size:
 
@@ -105,7 +103,7 @@ The following is a [size comparison](https://bundlephobia.com/) between `is-plai
 
 ### Edge Cases Other Libraries Missed
 
-It's obvious that `is-plain` is not the smallest of the four, but the size wasn't the only thing I was after with `is-plain`. Most importantly, what I wanted to address is some of the edge cases and inconsistencies the other libraries have.
+It's obvious that `is-plain` is not the smallest of the four, but the size wasn't the only thing I was after. Most importantly, what I wanted to address is some of the edge cases the other libraries are missing.
 
 The following are some of the cases that causes inconsistent, arguably incorrect, results when one of the other three libraries is used (**note that in all of the following cases, `is-plain` considers these objects to be plain objects**).
 
