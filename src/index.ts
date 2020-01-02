@@ -5,20 +5,16 @@
  * @param value {*}
  * @returns boolean
  */
-function isPlain<T>(value: T): boolean {
+function isPlain(value: unknown): value is object {
   if (Object.prototype.toString.call(value) !== '[object Object]') {
     return false;
   }
 
-  // if the object has own 'constructor' property, we fallback to the
-  // constructor of its prototype
-  const ctor = Object.prototype.hasOwnProperty.call(value, 'constructor')
-    ? Object.getPrototypeOf(value).constructor
-    : (value as {}).constructor;
+  const prototype = Object.getPrototypeOf(value);
 
   return (
-    !ctor /* objects created with Object.create(null) */ ||
-    ctor === Object /* constructor must be Object */
+    !prototype /* objects created with Object.create(null) */ ||
+    prototype.constructor === Object /* constructor must be Object */
   );
 }
 

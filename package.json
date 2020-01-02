@@ -44,11 +44,11 @@
   "bundlesize": [
     {
       "path": "./dist/is-plain.js",
-      "maxSize": "167 B"
+      "maxSize": "141 B"
     },
     {
       "path": "./dist/is-plain.esm.js",
-      "maxSize": "167 B"
+      "maxSize": "140 B"
     }
   ]
 }
