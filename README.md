@@ -1,4 +1,4 @@
-<div align=center><img style="margin-bottom: 24px; display: inline-block" src="https://user-images.githubusercontent.com/2100222/71579003-64cf9780-2af2-11ea-9511-79696793c2e8.png" width="96" /></div>
+<div align=center><img style="margin-bottom: 24px; display: inline-block" src="https://user-images.githubusercontent.com/2100222/71647336-3964cc80-2ced-11ea-88bb-8d7fb741b9ff.png" width="96" /></div>
 
 <h1 align="center">
 
@@ -35,11 +35,11 @@
 </p>
 </details>
 
-Tests if a value is a [plain object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer), which can be:
+Tests if a value is a [plain object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer). That is:
 
-- An object created with the `Object` constructor, `new Object()`
-- An object without a prototype `Object.create(null)`
-- An object created using the literal notation `{}`
+- an object created using `new Object()`
+- or, an object without a prototype `Object.create(null)`
+- or, an object created using the literal notation `{}`
 
 ## Installation
 
@@ -91,19 +91,17 @@ So, why need `is-plain` when other solutions already exist?
 
 ### Small Package Size
 
-`is-plain` is only [**167 bytes**](https://github.com/siddharthkp/bundlesize) minzipped.
+`is-plain` is only [**140 bytes**](https://github.com/siddharthkp/bundlesize) minzipped.
 
-I originally wanted something _very_ small but the available solutions did not quite meet my needs. The small package size is one of the goals I was aiming for with `is-plain`.
-
-The following is a [size comparison](https://bundlephobia.com/) between `is-plain` and other popular libraries ranked by size:
+The following is a [size comparison](https://bundlephobia.com/) between `is-plain` and other popular libraries ranked by their minified size:
 
 <div align="center">
-<img src="https://user-images.githubusercontent.com/2100222/71575258-3cd93780-2ae4-11ea-8a37-0bf464fba1bf.png" width="820" />
+<img src="https://user-images.githubusercontent.com/2100222/71647240-ad9e7080-2ceb-11ea-93ef-5ba53f7a3885.png" width="820" />
 </div>
 
 ### Edge Cases Other Libraries Missed
 
-It's obvious that `is-plain` is not the smallest of the four, but the size wasn't the only thing I was after. Most importantly, what I wanted to address is some of the edge cases the other libraries are missing.
+While `is-plain` is very comparable to `is-plain-obj` in both size and logic (`is-plain` being smaller by 3 bytes), the size wasn't the the only motive. Most importantly, what I wanted to address is some of the edge cases the other libraries are missing.
 
 The following are some of the cases that causes inconsistent, arguably incorrect, results when one of the other three libraries is used (**note that in all of the following cases, `is-plain` considers these objects to be plain objects**).
 
