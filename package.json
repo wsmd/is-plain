@@ -1,6 +1,6 @@
 {
   "name": "is-plain",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "author": "Waseem Dahman <dwaseem@icloud.com>",
   "description": "Test if a value is a plain object",
   "license": "MIT",
